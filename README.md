@@ -2,28 +2,37 @@
 
 Hexis is a systems-oriented Java project focused on binary, hexadecimal, and low-level data representation.
 
-The current application analyses decimal, binary, hexadecimal, signed byte, nibble, and RGB colour values through a structured console utility built while studying *Big Java 4e*.
+The long-term goal of the project is to evolve into a fully fledged hex editor and text editor inspired by tools such as Vim, with a strong focus on binary inspection, hexadecimal analysis, file structure exploration, and reverse engineering workflows.
 
-Long-term, Hexis is intended to evolve into a fully fledged hex editor and text editor inspired by tools such as Vim, with a strong focus on:
-
-- binary inspection
-- hexadecimal analysis
-- reverse engineering workflows
-- file structure exploration
-- low-level systems tooling
-
-The project is being developed incrementally from first principles, with an emphasis on understanding how software works internally rather than relying heavily on external frameworks or libraries.
+The project is being developed incrementally from first principles as part of a long-term study of Java, computer science, and systems programming.
 
 ---
 
 # Current Features
 
-- Decimal, binary, and hexadecimal analysis
-- Signed and unsigned byte interpretation
-- Nibble analysis
-- Manual hexadecimal formatting
-- RGB hexadecimal colour formatting
-- Structured terminal-style report output
+## Byte Analysis
+
+Analyse byte values and display:
+
+* Decimal representation
+* Binary representation
+* Hexadecimal representation
+* Signed and unsigned byte interpretation
+* Nibble analysis
+* Manual hexadecimal conversion
+
+## RGB Colour Analysis
+
+* RGB colour modelling using object composition
+* RGB hexadecimal colour generation
+* Terminal colour highlighting using ANSI escape sequences
+
+## Terminal Utilities
+
+* Terminal foreground colour support
+* Terminal background colour support
+* Terminal reset functionality
+* Terminal screen clearing
 
 ---
 
@@ -31,11 +40,13 @@ The project is being developed incrementally from first principles, with an emph
 
 ```text
 ==================================================
-                HEXIS v0.0.1
-         Number Representation Lab
+                HEXIS v0.0.2
+          Terminal Colour Highlighting
 ==================================================
 
-Enter a byte value (0 - 255): 173
+================ INPUT =================
+
+Decimal Input        : 173
 
 ============= REPRESENTATIONS =============
 
@@ -50,58 +61,61 @@ Signed Byte          : -83
 
 High Nibble          : 10
 Low Nibble           : 13
+
+============== HEX BREAKDOWN ===============
+
+Hex Digits           : 0123456789ABCDEF
+
+High Hex Digit       : A
+Low Hex Digit        : D
+
+Combined Hex         : AD
+
+================ END REPORT ================
 ```
 
 ---
 
-# Roadmap
+# Version History
 
-## v0.0.2
+## v0.0.1 — Number Representation Lab
 
-- Repeated execution loop
-- User-entered RGB values
-- Binary padding to full 8-bit output
-- Improved console formatting
-- Hexadecimal lookup tables
+Initial release featuring:
 
-## v0.0.3
+* Decimal, binary, and hexadecimal analysis
+* Signed byte interpretation
+* Nibble analysis
+* Manual hexadecimal formatting
+* RGB hexadecimal colour generation
+* Structured terminal reporting
 
-- Decimal/hex/binary conversion tables
-- Batch value analysis mode
-- ASCII character representation
-- Configurable output sections
-- Improved formatter architecture
+## v0.0.2 — Terminal Colour Highlighting
 
-## v0.0.4
+Added:
 
-- Introduction of file handling
-- Read raw bytes from files
-- Display hexadecimal byte output
-- Display ASCII alongside hexadecimal
-- Offset/address column support
+* ANSI terminal colour support
+* Dynamic foreground colour rendering
+* RGB-driven terminal highlighting
+* `TerminalStyle` class
+* Terminal reset functionality
+* Terminal screen clearing
 
-## v0.0.5
-
-First true binary inspection release featuring:
-
-- Hex dump viewer
-- File signature detection
-- Structured byte grouping
-- Binary inspection tooling
-- Magic number analysis
-- Basic reverse engineering workflows
-- Initial parser experimentation
+This release introduced terminal styling so Hexis can visually represent RGB colour data directly in the console.
 
 ---
 
-# Long-Term Vision
+# Future Direction
 
-Hexis is intended to gradually evolve into a serious low-level inspection and editing environment for:
+Future versions of Hexis are expected to introduce:
 
-- binary analysis
-- reverse engineering
-- file format research
-- media container exploration
-- systems programming experimentation
+* User-configurable RGB terminal colours
+* File reading and binary inspection
+* Hex dump generation
+* File signature and magic number detection
+* Binary structure exploration
+* Reverse engineering utilities
+* Hex viewing and editing
+* Text editing capabilities
+* Vim-inspired workflows
 
-The project prioritises understanding and implementation depth over rapid development speed.
+The project ultimately aims to become a practical environment for exploring, understanding, and editing binary data.
